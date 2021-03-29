@@ -1,4 +1,4 @@
-const Book = class book {
+const Book = class {
     constructor(title, author, ISBN, numCopies) {
         this.title = title;
         this.author = author;
@@ -29,12 +29,14 @@ const Book = class book {
     }
 }
 
-const howelsMovingCastle= new Book("Howel's Moving Castle", "Diana Wynne Jones", 0061478789, 16);
+const howelsMovingCastle= new Book("Howel's Moving Castle", "Diana Wynne Jones", "0061478789", 16);
 
-console.log(howelsMovingCastle.avalability());
-howelsMovingCastle.sell(10);
-console.log(howelsMovingCastle.avalability());
-howelsMovingCastle.sell(6);
-console.log(howelsMovingCastle.avalability());
-howelsMovingCastle.restock(20);
-console.log(howelsMovingCastle.avalability())
+// console.log(howelsMovingCastle.avalability());
+// howelsMovingCastle.sell(10);
+// console.log(howelsMovingCastle.avalability());
+// howelsMovingCastle.sell(6);
+// console.log(howelsMovingCastle.avalability());
+// howelsMovingCastle.restock(20);
+// console.log(howelsMovingCastle.avalability())
+
+export default Book
