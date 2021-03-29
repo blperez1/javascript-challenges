@@ -69,32 +69,23 @@ const menu = [
 const vegOptions = document.querySelector('#vegOptions');
 const dinner = document.querySelector('#dinner');
 
+const vegetarian = menu.filter(({isVegetarian}) => isVegetarian)
+const nonVegetarian = menu.filter(({isVegetarian}) => !isVegetarian)
 
 const renderDish = ({item}) => `<li>${item}</li>`;
 
-const vegetarian = menu.filter(({isVegetarian}) => isVegetarian)
-
-const renderVegetarian = () => {
+const renderDishes = (arr, location) => {
     let html = '';
-    for(let item of vegetarian) {
+    for(let item of arr) {
         html += renderDish(item);
     }
 
-    vegOptions.innerHTML = html;
+    location.innerHTML = html;
 }
 
-renderVegetarian();
+renderDishes(vegetarian, vegOptions);
+renderDishes(nonVegetarian, dinner);
 
-const nonVegetarian = menu.filter(({isVegetarian}) => !isVegetarian)
 
-const renderNonVegetarian = () => {
-    let html = '';
-    for(let item of nonVegetarian) {
-        html += renderDish(item);
-    }
 
-    dinner.innerHTML = html;
-}
-
-renderNonVegetarian();
 
