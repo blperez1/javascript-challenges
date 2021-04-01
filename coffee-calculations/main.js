@@ -5,7 +5,7 @@ const totalCost = (arr) => {
         return acc + coffee;
     }, 0);
 
-    return totalCoffees * 1.25; 
+    return `Your total bill is ${totalCoffees * 1.25}`
 }
 
 console.log(totalCost(coffees))
