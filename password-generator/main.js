@@ -56,12 +56,6 @@ function generateRange(charRange, isChecked) {
     generatePassword(passwordLength);
 }
 
-function copyText() {
-    generatedPassword.innerText.select();
-  document.execCommand("copy");
-}
-
-
 upperCase.addEventListener("click", (e) => {
     const upperCaseRange = [...range(65, 90)];
     generateRange(upperCaseRange, e.target.checked);
@@ -83,7 +77,7 @@ symbols.addEventListener("click", (e) => {
 })
 
 
-slider.addEventListener("change", (e) => {
+slider.addEventListener("input", (e) => {
     passwordLength = e.target.valueAsNumber;
 
     if(!upperCase.checked && !lowerCase.checked && !numbers.checked && !symbols.checked) {
@@ -98,4 +92,4 @@ slider.addEventListener("change", (e) => {
    
 })
 
-copy.addEventListener("click", copyText)
+
