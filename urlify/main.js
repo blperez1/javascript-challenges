@@ -1,11 +1,7 @@
-
-
-
 /* .toLowerCase()
 regex to remove punctuation
 remove spaces with -
 */
-
 
 let blogPostTitle = "Blossom's Blog Post Title!";
 
