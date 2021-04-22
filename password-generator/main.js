@@ -13,7 +13,7 @@ function isNotChecked() {
     lowerCase.checked = false;
     numbers.checked = false;
     symbols.checked = false;
-    slider.valueAsNumber = 10;
+    slider.valueAsNumber = 8;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
